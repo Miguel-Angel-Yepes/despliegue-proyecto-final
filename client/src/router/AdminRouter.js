@@ -22,9 +22,9 @@ export function AdminRouter() {
       <Route path="/admin/*" element={<Auth />} />
     ) : (
       <>
-        <Route path="https://servimascotas.onrender.com/admin" element={loadLayout(AdminLayout, Home)} />
-        <Route path="https://servimascotas.onrender.com/admin/products" element={loadLayout(AdminLayout, Products)} />
-        <Route path="https://servimascotas.onrender.com/admin/appoinments" element={loadLayout(AdminLayout, Appoinments)} />
+        <Route path="/admin" element={loadLayout(AdminLayout, Home)} />
+        <Route path="/admin/products" element={loadLayout(AdminLayout, Products)} />
+        <Route path="/admin/appoinments" element={loadLayout(AdminLayout, Appoinments)} />
       </>
     )}
 </Routes>
