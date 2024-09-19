@@ -1,4 +1,4 @@
-const SERVER_IP = "https://back-servimacotas.onrender.com";
+const SERVER_IP = "https://back-servimascotas.onrender.com";
 
 export const ENV = {
     BASE_PATH: `${SERVER_IP}`,

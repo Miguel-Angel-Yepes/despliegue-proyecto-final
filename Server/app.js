@@ -7,6 +7,7 @@ import { MercadoPagoConfig, Preference } from 'mercadopago';
 // Inicialización de Express
 const app = express();
 app.use(cors());
+
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
