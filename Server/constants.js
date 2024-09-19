@@ -3,7 +3,7 @@ const DB_PASSWORD = "a84Q6jSV9czUSfwo";
 const DB_HOST = "servimascotasdb.sqplf6h.mongodb.net/";
 
 const API_VERSION = "v1";
-const IP_SERVER = "https://servimascotas.onrender.com";
+const IP_SERVER = "https://back-servimacotas.onrender.com/";
 
 const JWT_SECRET_KEY = "ukIzB3S8UeXDNeVBMYh9YOlyRNqq";
 
