@@ -20,20 +20,20 @@ export function WebRouter() {
  
   return (
     <Routes>
-        <Route path='/' element=<Home/>  />
-        <Route path='/contact' element={loadLayout(ClientLayout, Contact, "Contacto")} />
-        <Route path='/product' element={loadLayout(ClientLayout, Product)} />
+        <Route path='https://servimascotas.onrender.com' element=<Home/>  />
+        <Route path='https://servimascotas.onrender.com/contact' element={loadLayout(ClientLayout, Contact, "Contacto")} />
+        <Route path='https://servimascotas.onrender.com/product' element={loadLayout(ClientLayout, Product)} />
         {!user ? (
           <>
-          <Route path='/appoinments' element={<Auth />} />
-          <Route path='/checkout' element={<Auth />} />
-          <Route path='/post-checkout' element={<Auth />} />
+          <Route path='https://servimascotas.onrender.com/appoinments' element={<Auth />} />
+          <Route path='https://servimascotas.onrender.com/checkout' element={<Auth />} />
+          <Route path='https://servimascotas.onrender.com/post-checkout' element={<Auth />} />
           </>
         ) : (
           <>
-          <Route path='/appoinments' element={loadLayout(ClientLayout, Appoinments, "Peluquería")} />
-          <Route path='/checkout' element={loadLayout(ClientLayout, Checkout, "Pago")} />
-          <Route path='/post-checkout' element={<PostCheckout />} />
+          <Route path='https://servimascotas.onrender.com/appoinments' element={loadLayout(ClientLayout, Appoinments, "Peluquería")} />
+          <Route path='https://servimascotas.onrender.com/checkout' element={loadLayout(ClientLayout, Checkout, "Pago")} />
+          <Route path='https://servimascotas.onrender.com/post-checkout' element={<PostCheckout />} />
           </>
         )}
     </Routes>
