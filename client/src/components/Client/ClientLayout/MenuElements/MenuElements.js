@@ -161,7 +161,7 @@ export function MenuElements({ onSearch, onOpenCloseCart,onReloadCart }) {
                 navigate('/contact');
               }}
             >
-              Contacto
+              <a>Contacto</a>
             </div>
             
             <div className={styles['menu-modal__divider']}></div>
