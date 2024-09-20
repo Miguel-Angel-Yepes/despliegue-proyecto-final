@@ -89,5 +89,9 @@ app.use(`/api/${API_VERSION}`, cartRoutes);
 app.use(`/api/${API_VERSION}`, checkoutRoutes);
 // app.use(`/api/${API_VERSION}`, preferenceRoutes);
 
+app.get('*', (req, res) => {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 // Exportar app como default para ES Modules
 export default app;

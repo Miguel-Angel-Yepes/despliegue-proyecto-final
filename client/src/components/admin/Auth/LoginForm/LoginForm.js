@@ -34,7 +34,7 @@ export function LoginForm(props) {
 
 
           onOpenCloseLogin();
-          navigate("/contact");
+          // navigate("/admin");
         } catch (error) {
           setError(error.msg);
         }
