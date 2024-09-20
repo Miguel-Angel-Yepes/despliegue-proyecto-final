@@ -160,8 +160,8 @@ export const acceptAppoinment = async (req, res) => {
         const updatedAppoinment = await Appoinment.findByIdAndUpdate(
             id,
             {
-                active: false,
-                isDone: true,
+                active: true,
+                isDone: false,
             },
             { new: true }
         ).populate('user'); // Popula el campo 'user' para acceder al correo del usuario
