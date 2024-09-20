@@ -39,9 +39,7 @@ export function LoginForm(props) {
           
           
 
-          if (user.role == "admin") {
-            navigate("/admin");
-          }
+          navigate("/admin");
         } catch (error) {
           setError(error.msg);
         }
