@@ -5,11 +5,13 @@ import { initialValues, validationSchema } from './LoginForm.form';
 import { Auth } from '../../../../api';
 import { useAuth } from '../../../../hooks';
 import { image } from '../../../../assets';
+import { useNavigate } from 'react-router-dom';
 import '../Form.css';
 
 const authController = new Auth();
 
 export function LoginForm(props) {
+  const navigate = useNavigate();
 
     const { login } = useAuth();
 
@@ -30,7 +32,9 @@ export function LoginForm(props) {
 
           login(response.access);
 
-          onOpenCloseLogin()
+
+          onOpenCloseLogin();
+          navigate("/contact");
         } catch (error) {
           setError(error.msg);
         }
