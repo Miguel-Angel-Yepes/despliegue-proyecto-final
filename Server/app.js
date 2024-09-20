@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 const client = new MercadoPagoConfig({
-     accessToken: 'APP_USR-6883231287526446-091423-cdfc409cefc232e5e46d7440d16bf7d9-1990230101' 
+     accessToken: 'APP_USR-378117052698226-091914-e97df1011f0c115c53e2139ee36d8ca7-1993006945' 
 });
 
 app.post(`/api/${API_VERSION}/create_preference`, async(req, res) => {

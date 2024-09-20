@@ -17,7 +17,7 @@ const preferenceController = new Preference();
 const checkoutController = new Checkout();
 
 export function DirectionForm(props) {
-  initMercadoPago('APP_USR-0b0888c5-7a07-4b08-a4f7-d75309c1435f', { locale: 'es-CO' });
+  initMercadoPago('APP_USR-a6181c8c-164d-4d09-ae15-543995633084', { locale: 'es-CO' });
 
   const { user } = useAuth();
   const { directionData, setDeliveryMunicipality, handleDeliveryState, deliveryState, deliveryMunicipality } = props;
