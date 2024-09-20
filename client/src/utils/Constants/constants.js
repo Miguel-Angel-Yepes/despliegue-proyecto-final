@@ -1,4 +1,4 @@
-const SERVER_IP = "https://servimascotas.netlify.app";
+const SERVER_IP = "https://servimascotas.onrender.com";
 
 export const ENV = {
     BASE_PATH: `${SERVER_IP}`,
