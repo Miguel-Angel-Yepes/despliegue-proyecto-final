@@ -10,7 +10,7 @@ export function AdminRouter() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (user && user.role !== "admin") {
+    if (user && user.role !== "admin" && location.pathname.startsWith('/admin')) {
       navigate('/'); // Redirige a la página principal si el rol no es admin
     }
   }, [user, navigate]);
