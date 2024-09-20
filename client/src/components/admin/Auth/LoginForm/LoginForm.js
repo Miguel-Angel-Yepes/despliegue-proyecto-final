@@ -13,7 +13,7 @@ const authController = new Auth();
 export function LoginForm(props) {
   const navigate = useNavigate();
 
-    const { login } = useAuth();
+    const { login, user } = useAuth();
 
     const { openRegister, onOpenCloseLogin } = props;
     const [error, setError] = useState("");
@@ -35,9 +35,9 @@ export function LoginForm(props) {
 
           onOpenCloseLogin();
 
-          // if (response.role === "admin") {
+          if (user.role == "admin") {
             navigate("/admin");
-          // }
+          }
         } catch (error) {
           setError(error.msg);
         }
