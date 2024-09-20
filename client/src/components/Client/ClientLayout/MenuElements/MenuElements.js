@@ -85,8 +85,7 @@ export function MenuElements({ onSearch, onOpenCloseCart,onReloadCart }) {
             Peluquería
           </Button>
           <Button
-            as="a"
-            href="/contact"
+            onClick={navigate('/contact')}
             className={styles['menu-elements__Button']}
             size="large"
           >
