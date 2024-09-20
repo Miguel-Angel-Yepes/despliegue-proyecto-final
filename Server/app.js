@@ -31,9 +31,9 @@ app.post(`/api/${API_VERSION}/create_preference`, async(req, res) => {
         const body = {
             items: items,
             back_urls: {
-                success: "https://servimascotas.onrender.com/post-checkout",
+                success: "https://servimascotas.onrender.com",
                 failure: "https://servimascotas.onrender.com",
-                pending: "https://servimascotas.onrender.com/post-checkout",
+                pending: "https://servimascotas.onrender.com",
             },
             auto_return: "approved",
             shipments: {
