@@ -34,7 +34,10 @@ export function LoginForm(props) {
 
 
           onOpenCloseLogin();
-          // navigate("/admin");
+
+          if (response.role === "admin") {
+            navigate("/admin");
+          }
         } catch (error) {
           setError(error.msg);
         }
