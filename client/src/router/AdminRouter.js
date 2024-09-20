@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Routes, Route, useNavigate } from 'react-router-dom';
 import { Auth, Home, Products, Appoinments } from '../pages/admin';
 import { AdminLayout } from '../layouts';
