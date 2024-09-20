@@ -79,7 +79,7 @@ export function Products(props) {
   useEffect(() => {
     (async () => {
       try {
-        const response = await productController.getProducts({ page, limit: 10, active: true, categories, orderBy });
+        const response = await productController.getProducts({ page, limit: 8, active: true, categories, orderBy });
 
         if (response.docs.length === 0) {
           setError("No se ha encontrado ningún producto");
