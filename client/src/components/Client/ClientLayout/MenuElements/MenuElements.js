@@ -156,9 +156,12 @@ export function MenuElements({ onSearch, onOpenCloseCart,onReloadCart }) {
 
             <div
               className={styles['menu-modal__item']}
-              onClick={handleCloseMenu}
+              onClick={() => {
+                handleCloseMenu();
+                navigate('/contact');
+              }}
             >
-              <a href="/contact">Contacto</a>
+              Contacto
             </div>
             
             <div className={styles['menu-modal__divider']}></div>
