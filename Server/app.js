@@ -31,9 +31,9 @@ app.post(`/api/${API_VERSION}/create_preference`, async(req, res) => {
         const body = {
             items: items,
             back_urls: {
-                success: "https://www.youtube.com/watch?v=7oXfKZDZ_0c",
-                failure: "https://www.youtube.com/watch?v=D3enxLZosHg",
-                pending: "https://www.youtube.com/watch?v=Igu4hGD0Mgw",
+                success: "https://servimascotas.onrender.com/post-checkout",
+                failure: "https://servimascotas.onrender.com",
+                pending: "https://servimascotas.onrender.com/post-checkout",
             },
             auto_return: "approved",
             shipments: {
@@ -89,9 +89,6 @@ app.use(`/api/${API_VERSION}`, cartRoutes);
 app.use(`/api/${API_VERSION}`, checkoutRoutes);
 // app.use(`/api/${API_VERSION}`, preferenceRoutes);
 
-app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
 
 // Exportar app como default para ES Modules
 export default app;
