@@ -9,6 +9,7 @@ import { MenuElements, Footer } from '../../ClientLayout';
 import { Product, Cart } from '../../../../api';
 import { useAuth } from '../../../../hooks';
 import { LoginForm, RegisterForm } from '../../../admin/Auth';
+import { useNavigate } from 'react-router-dom';
 import './Products.css';
 import styles from './Cart.module.css';
 
@@ -16,6 +17,7 @@ const productController = new Product();
 const cartController = new Cart();
 
 export function Products(props) {
+  const navigate = useNavigate();
 
   const { user } = useAuth();
   const [reloadCart, setReloadCart] = useState(false);
