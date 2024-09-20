@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Image, Icon, Sidebar, Segment, Menu, Button, Card, Modal } from 'semantic-ui-react';
 import { Product as ProductClass, Cart } from '../../../../api';
 import { ENV } from '../../../../utils';
-import { useLocation } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { CartItem } from '../../Home/CartItem';
 import { size } from 'lodash';
 import { useAuth } from '../../../../hooks';
@@ -17,6 +17,8 @@ const cartController = new Cart();
 const productController = new ProductClass();
 
 export function Product() {
+  const navigate = useNavigate();
+
   const location = useLocation();
   const { productId } = location.state || {};
   const [product, setProduct] = useState(null);
@@ -180,7 +182,7 @@ export function Product() {
               <p>${cartContent?.total}</p>
             </div>
 
-            <Button className={styles2.paymentButton} as="a" href='/checkout'>
+            <Button className={styles2.paymentButton} onClick={() => {navigate("/checkout")}}>
               Ir a pagar
             </Button>
           </div>
