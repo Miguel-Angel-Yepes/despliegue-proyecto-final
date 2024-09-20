@@ -145,7 +145,7 @@ export function Products(props) {
               <p>${cartContent?.total}</p>
             </div>
 
-            <Button className={styles.paymentButton} as="a" href='/checkout'>
+            <Button className={styles.paymentButton} onClick={() => {navigate("/checkout")}}>
               Ir a pagar
             </Button>
           </div>
