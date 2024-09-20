@@ -1,5 +1,5 @@
 import React, {useEffect} from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route, useNavigate, useLocation  } from 'react-router-dom';
 import { Auth, Home, Products, Appoinments } from '../pages/admin';
 import { AdminLayout } from '../layouts';
 import { useAuth } from '../hooks';
@@ -8,12 +8,13 @@ export function AdminRouter() {
   
   const { user } = useAuth();  
   const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     if (user && user.role !== "admin" && location.pathname.startsWith('/admin')) {
       navigate('/'); // Redirige a la página principal si el rol no es admin
     }
-  }, [user, navigate]);
+  }, [user, navigate, location]);
 
   const loadLayout = (Layout, Page) =>{
     return (
