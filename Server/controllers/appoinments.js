@@ -151,7 +151,7 @@ export async function deleteAppoinment(req, res) {
         res.status(500).send({ msg: "Error al eliminar la cita", error });
     }
 }
-
+// por favor
 export const acceptAppoinment = async (req, res) => {
     try {
         const { id } = req.params;
